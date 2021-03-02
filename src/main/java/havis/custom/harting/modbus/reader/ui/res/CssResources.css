@@ -1,0 +1,177 @@
+@CHARSET "UTF-8";
+
+@url LIST_EXPORT listExport;
+
+@external .gwt-ListBox;
+
+*, html {
+	font-family: Arial;	
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+input[type="text"] {
+	box-sizing: border-box;
+	font-size: 21px;
+	border: 1px solid #ccc;
+	border-radius: 2.5em;
+	width: 350px;
+	height: 35px;
+	padding: 0.25em 0.5em;
+	box-shadow: inset 5px 7px 9px 0 rgba(204, 204, 204, 0.41);
+	background-color: transparent;
+	color: graytext;
+}
+
+a > img {
+	height: 40px;
+	padding-top: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.gwt-ListBox {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 120px;
+	font-size: 1em;
+}
+
+.header {
+	font-weight: bold;
+	padding-left: 0.3em;
+	border-bottom: 1px solid lightgrey;
+	line-height: 3em;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.infoRow {
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	align-items: center;
+	-ms-flex-align: center;
+	padding-left: 2.3em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.col {
+	display: flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-ms-flex-direction: column;
+}
+
+.deviceInfo .infoRow > *:first-child {
+	width: 200px;
+}
+
+.runtimeConfig .infoRow > *:first-child {
+	width: 220px;
+}
+
+.runtimeConfig .infoRow > *:nth-child\(3\) {
+	padding-left: 20px;
+	width: 100px;
+}
+
+.runtimeConfig .infoRow > *:nth-child\(5\), .runtimeConfig .infoRow > *:nth-child\(6\), 
+.runtimeConfig .infoRow > *:nth-child\(7\) {
+	margin-left: 20px;
+}
+
+* > .infoRow:last-child {
+	margin-bottom: 10px;
+}
+
+.container {
+	overflow: auto;
+}
+
+.container > * {
+	font-size: 1.5em;
+}
+
+.container > * > * {
+	border-bottom: 1px solid lightgrey;
+}
+
+.configSec > *:last-child > *:last-child {
+	padding-bottom: 20px;
+}
+
+.configSec > *:last-child > *:first-child {
+	border-top: 1px solid lightgrey;
+	padding-top: 20px;
+}
+
+.configSec:last-child > div:nth-child\(2\) > * {
+	padding-left: 2.5em;
+}
+
+.configSec:last-child > *:last-child > *:first-child {
+	padding-top: 0 !important;
+}
+
+.export {
+	font-size: 1em;
+	font-weight: bold;
+	border-left: 1px solid lightgrey;
+	border-bottom: none;
+	border-right: none;
+	border-top: none;
+	background: LIST_EXPORT no-repeat right;
+	height: 42px;
+	padding-right: 55px;
+	padding-left: 20px;
+}
+
+.regTable {
+	font-size: 0.6em;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.regTable tr > td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.regTable tr:first-child > td {
+	font-weight: bold;
+	padding-top: 10px;
+	font-size: 1.2em;
+}
+
+.regTable tr:nth-child\(even\) {
+	background-color: lightgrey;
+}
+
+.regTable tr:nth-child\(odd\) {
+	background-color: white;
+}
+
+.regTable tr:first-child td, .regTable tr td:nth-child\(1\), .regTable tr td:nth-child\(2\),
+.regTable tr td:nth-child\(3\), .regTable tr td:nth-child\(4\) {
+	text-align: center;
+}
+
+.regTable tr td:nth-child\(1\), .regTable tr td:nth-child\(2\),
+.regTable tr td:nth-child\(3\), .regTable tr td:nth-child\(4\) {
+	width: 90px;
+}
+
+.regTable tr:first-child td:last-child, tr td:last-child {
+	text-align: left;
+	padding-left: 20px;
+}
+
+td > .col > div:first-child {
+	font-weight: bold;
+}

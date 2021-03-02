@@ -1,0 +1,26 @@
+<div class="section-content" *ngIf="info$ | async as info">
+  <label>
+    <span>Vendor</span>
+    <input type="text" disabled [value]="info.vendorName" />
+  </label>
+  <label>
+    <span>Product</span>
+    <input type="text" disabled [value]="info.productCode" />
+  </label>
+  <label>
+    <span>Sw Revision</span>
+    <input type="text" disabled [value]="info.majorMinorRevision" />
+  </label>
+  <label>
+    <span>Serial No</span>
+    <input type="text" disabled [value]="info.serialNumber" />
+  </label>
+  <label>
+    <span>Hw Revision</span>
+    <input type="text" disabled [value]="info.hardwareRevision" />
+  </label>
+  <label>
+    <span>Firmware</span>
+    <input type="text" disabled [value]="info.baseFirmware" />
+  </label>
+</div>

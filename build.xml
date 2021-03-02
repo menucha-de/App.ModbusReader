@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project name="havis.custom.harting.modbus.reader" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if">
+
+	<property file="${basedir}/build.properties" />
+
+	<import>
+		<url url="${ivy.url}/ant/default.xml" />
+	</import>
+
+	<firstmatchmapper id="jarmapper">
+		<globmapper from="${build.dir}/*.jar" to="${dst.dir}/bundle/50_*.jar" />
+	</firstmatchmapper>
+
+	<target name="clean-cache">
+		<clean-cache />
+	</target>
+
+	<target name="clean-all">
+		<clean-all />
+	</target>
+
+	<target name="compile">
+		<compile>
+			<src path="${src.main.dir}" />
+		</compile>
+		<compile-gwt />
+	</target>
+
+	<target name="jar" depends="compile">
+		<copy todir="${build.dir.classes}" overwrite="true">
+			<fileset dir="${resources.dir.classpath}" includes="havis-modbus-reader/dfltFields.properties" />
+			<filterset refid="manifest" />
+		</copy>
+		<jar-bin />
+	</target>
+
+	<target name="app" depends="jar">
+		<mkdir dir="${build.dir}/deb/opt/havis-apps/conf/havis/custom/harting/modbus/reader" />
+		<mkdir dir="${build.dir}/deb/opt/havis-apps/bundle" />
+		<symlink link="${build.dir}/deb/opt/havis-apps/bundle/40_havis.util.modbus.jar" resource="/usr/share/java/havis.util.modbus.jar" />
+		<app name="havis.modbus-reader">
+			<ivy:retrieve pattern="${build.dir}/tar/[artifact].[ext]" conf="runtime" log="quiet" />
+		</app>
+	</target>
+
+	<target name="test" depends="compile">
+		<test />
+	</target>
+
+	<target name="standalone" depends="jar">
+		<standalone mapper="jarmapper" />
+		<extract name="havis.device.rf-nur.app"/>
+	</target>
+
+	<target name="publish" depends="app" description="Publishes the JAR to the repository">
+		<publish jar="false" app="false" />
+	</target>
+
+</project>

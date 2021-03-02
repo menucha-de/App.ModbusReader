@@ -1,0 +1,24 @@
+.label {
+  width: 9em;
+}
+
+.short-label {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.unit {
+  width: 6em;
+  padding-left: 1em;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}

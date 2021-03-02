@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	</ui:style>
+	
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.cons.AppConstants" field="i18n" />
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.AppResources" field="res" />
+	
+	<g:FlowPanel styleName="{res.css.infoRow}">
+		<g:Label ui:field="name"/>
+		<g:ToggleButton ui:field="switcher" styleName="webui-Switcher"/>
+		<g:Label ui:text="{i18n.qty}" />
+		<g:ValueListBox ui:field="qty" />
+		<g:Label ui:text="{i18n.length}"/>
+		<g:ValueListBox ui:field="length" />
+		<g:Label ui:text="{i18n.bitWords}"/>
+	</g:FlowPanel>
+</ui:UiBinder> 

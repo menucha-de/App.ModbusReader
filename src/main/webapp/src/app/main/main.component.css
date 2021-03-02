@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border-left: 1px solid lightgray;
+
+}
+
+.header span {
+  margin-right: 10px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.export {
+  background-image: url('/assets/images/list_export.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.photo {
+  margin: 0 5px -15px 5px
+}

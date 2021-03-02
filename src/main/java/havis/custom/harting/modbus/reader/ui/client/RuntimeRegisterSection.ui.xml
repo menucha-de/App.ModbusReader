@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:shr="urn:import:havis.net.ui.shared.client.widgets" xmlns:s="urn:import:havis.net.ui.shared.client">
+	
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.cons.AppConstants" field="i18n" />
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.AppResources" field="res" />
+	
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<s:SectionHeader>
+			<g:Button ui:field="export" styleName="{res.css.export}">Export</g:Button>
+		</s:SectionHeader>
+		<g:FlowPanel>
+			<g:FlexTable ui:field="regTable" styleName="{res.css.regTable}"/>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

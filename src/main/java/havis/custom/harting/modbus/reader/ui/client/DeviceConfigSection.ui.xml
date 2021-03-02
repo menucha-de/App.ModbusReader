@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.cons.AppConstants" field="i18n" />
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.AppResources" field="res" />
+	
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.useManagement}"></g:Label>
+			<g:Anchor href=".">
+				<img src="{res.management.getSafeUri}"></img>
+			</g:Anchor>
+			<g:Label ui:text="{i18n.setupDevice}"></g:Label>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

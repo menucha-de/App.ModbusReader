@@ -1,0 +1,27 @@
+<mica-section-frame appTitle="MODBUSREADER" [showHeader]="showFrame" [showBack]="false">
+
+  <div class="section">
+
+    <mica-accordion>
+      <mica-expandable label="Device Info">
+        <app-device-info></app-device-info>
+      </mica-expandable>
+      <mica-expandable label="Device Configuration">
+        <div class="section-content" >
+          <label>Please use the RFID Hardware area within Management</label><a href="."><img class ="photo" src="/assets/images/cbimage.jpg" ></a><label>to setup the device</label>
+        </div>
+      </mica-expandable>
+      <mica-expandable label=" Runtime Configuration">
+        <app-runtime-config></app-runtime-config>
+      </mica-expandable>
+      <mica-expandable label=" Runtime Register" class="expandable1">
+        <div class="header">
+          <span>Export</span><a class="export" [href]="apiEndpoint + 'rest/custom/harting/modbusreader/runtime/export'" target="_blank"></a>
+        </div>
+        <app-runtime-register></app-runtime-register>
+      </mica-expandable>
+    </mica-accordion>
+  </div>
+
+  <mica-log-viewer-main></mica-log-viewer-main>
+</mica-section-frame>

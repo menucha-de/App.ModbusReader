@@ -1,0 +1,13 @@
+<div class="row">
+  <label><span class="label">{{ label }}</span>
+    <mica-switch (change)="changeValue(enabled ? backupLength : 0)" [(ngModel)]="enabled"></mica-switch>
+  </label>
+  <label>
+    <span class="short-label">Length</span>
+    <select [(ngModel)]="backupLength" [disabled]="!enabled" (change)="changeValue(backupLength)">
+      <option *ngFor="let value of values" [ngValue]="value">{{ value }}</option>
+    </select>
+  </label>
+  <span class="unit">16 bit words</span>
+  <ng-content></ng-content>
+</div>

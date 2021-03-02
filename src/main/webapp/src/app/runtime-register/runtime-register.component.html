@@ -1,0 +1,21 @@
+<div class="section-content">
+  <table>
+    <thead>
+      <th>Register address</th>
+      <th>Length (WORD)</th>
+      <th>Register type</th>
+      <th>Access</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items$ | async">
+        <td>{{item.addressHex}}</td>
+        <td>{{item.length}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.type=="INPUT"?"R":"RW"}}</td>
+        <td><div>{{item.description.substring(0,item.description.indexOf("."))}}</div>
+        <span>{{item.description.substring(item.description.indexOf(".")+1)}}</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

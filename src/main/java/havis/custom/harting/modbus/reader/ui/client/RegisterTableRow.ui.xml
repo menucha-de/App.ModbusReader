@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:with type="havis.custom.harting.modbus.reader.ui.res.AppResources" field="res" />
+	
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label ui:field="regAddress"/>
+		<g:Label ui:field="length"/>
+		<g:Label ui:field="regType"/>
+		<g:Label ui:field="access"/>
+		<g:FlowPanel ui:field="descriptionContainer" styleName="{res.css.col}">
+			<g:Label ui:field="fieldName"/>
+			<g:Label ui:field="description"/>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,27 @@
+Bundle-Name: Ha-VIS Custom HARTING Modbus Reader App
+Bundle-SymbolicName: havis.custom.harting.modbus.reader
+Application-Name: Modbus Reader
+Bundle-Version: 2.7.0
+Implementation-Version: 2.7
+Bundle-ManifestVersion: 2
+Bundle-Vendor: HARTING IT_SD
+Havis-Bundle: 
+ /OSGI-INF/havis.custom.harting.modbus.reader.properties
+Bundle-Activator: havis.custom.harting.modbus.reader.osgi.Activator
+Import-Package: 
+ com.fasterxml.jackson.databind,
+ havis.device.rf,
+ havis.device.rf.capabilities,
+ havis.device.rf.configuration,
+ havis.device.rf.exception,
+ havis.device.rf.tag,
+ havis.device.rf.tag.operation,
+ havis.device.rf.tag.result,
+ havis.net.rest.shared.data,
+ havis.util.modbus,
+ javax.ws.rs,
+ javax.ws.rs.core,
+ javax.ws.rs.ext,
+ org.osgi;resolution:=optional,
+ org.osgi.framework;resolution:=optional,
+ org.osgi.util.tracker;resolution:=optional

@@ -1,0 +1,22 @@
+<div class="section-content" *ngIf="item$ | async as item">
+  <label>
+    <span>Tags in Field</span>
+    <select [(ngModel)]="item.tagsInField" (change)="update(item)">
+      <option *ngFor="let level of tagsInField" [ngValue]="level">{{level}}</option>
+    </select>
+  </label>
+  <app-include-row label="PC" [(value)]="item.includePC" (valueChange)="update(item)"></app-include-row>
+  <app-include-row label="CRC" [(value)]="item.includeCRC" (valueChange)="update(item)"></app-include-row>
+  <app-include-row label="Access Password" [(value)]="item.includeAccessPwd" (valueChange)="update(item)"></app-include-row>
+  <app-include-row label="Kill Password" [(value)]="item.includeKillPwd" (valueChange)="update(item)"></app-include-row>
+  <app-runtime-config-row label="EPC" [(length)]="item.epcLength" (lengthChange)="update(item)"></app-runtime-config-row>
+  <app-runtime-config-row label="TID" [(length)]="item.tidLength" (lengthChange)="update(item)"></app-runtime-config-row>
+  <app-runtime-config-row label="User Memory" [(length)]="item.userLength" (lengthChange)="update(item)"></app-runtime-config-row>
+  <app-runtime-config-row label="Selection Masks" [(length)]="item.selectionMaskMaxLength" (lengthChange)="update(item)">
+    <label class="short-label qty">Qty</label>
+    <select  [(ngModel)]="item.selectionMaskCount" (change)="update(item)" [disabled]="item.selectionMaskMaxLength === 0">
+      <option *ngFor="let level of qty" [ngValue]="level">{{level}}</option>
+    </select>
+  </app-runtime-config-row>
+  <app-runtime-config-row label="Custom Operation" [(length)]="item.customOperationMaxLength" (lengthChange)="update(item)"></app-runtime-config-row>
+</div>
