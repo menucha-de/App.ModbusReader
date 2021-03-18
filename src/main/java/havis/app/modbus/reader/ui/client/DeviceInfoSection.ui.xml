@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:shr="urn:import:havis.net.ui.shared.client.widgets">
+	
+	<ui:with type="havis.app.modbus.reader.ui.res.cons.AppConstants" field="i18n" />
+	<ui:with type="havis.app.modbus.reader.ui.res.AppResources" field="res" />
+	
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel addStyleNames="{res.css.deviceInfo}">
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.vendor}"></g:Label>
+			<g:TextBox enabled="false" ui:field="vendorName"></g:TextBox>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.product}"></g:Label>
+			<g:TextBox enabled="false" ui:field="productCode"></g:TextBox>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.swRevision}"></g:Label>
+			<g:TextBox enabled="false" ui:field="majorMinorRevision"></g:TextBox>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.serialNo}"></g:Label>
+			<g:TextBox enabled="false" ui:field="serialNumber"></g:TextBox>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.hwRevision}"></g:Label>
+			<g:TextBox enabled="false" ui:field="hardwareRevision"></g:TextBox>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{res.css.infoRow}">
+			<g:Label ui:text="{i18n.firmware}"></g:Label>
+			<g:TextBox enabled="false" ui:field="baseFirmware"></g:TextBox>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

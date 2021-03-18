@@ -5,10 +5,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import havis.custom.harting.modbus.reader.common.ReflectionServiceFactory;
-import havis.custom.harting.modbus.reader.common.ServiceFactory;
-import havis.custom.harting.modbus.reader.core.ModbusSlave;
-import havis.custom.harting.modbus.reader.rf.RfModule;
+import havis.app.modbus.reader.common.ReflectionServiceFactory;
+import havis.app.modbus.reader.common.ServiceFactory;
+import havis.app.modbus.reader.core.ModbusSlave;
+import havis.app.modbus.reader.rf.RfModule;
 import havis.device.rf.RFDevice;
 
 public class RfModuleMain {

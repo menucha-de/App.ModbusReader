@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd" xmlns:e="http://ant.apache.org/ivy/extra">
 
-	<info organisation="havis/custom/harting/modbus" module="reader-${platform}" default="true" e:app="havis.custom.harting.modbus.reader" />
+	<info organisation="havis/app/modbus" module="reader-${platform}" default="true" e:app="havis.app.modbus.reader" />
 
 	<configurations>
 		<conf name="default" />
@@ -11,9 +11,9 @@
 	</configurations>
 
 	<publications>
-		<artifact name="havis.custom.harting.modbus.reader" type="jar" conf="default" />
-		<artifact name="havis.custom.harting.modbus.reader-javadoc" conf="doc" />
-		<artifact name="havis.custom.harting.modbus.reader-sources" conf="src" />
+		<artifact name="havis.app.modbus.reader" type="jar" conf="default" />
+		<artifact name="havis.app.modbus.reader-javadoc" conf="doc" />
+		<artifact name="havis.app.modbus.reader-sources" conf="src" />
 		<artifact name="havis.modbus-reader" type="app" conf="app" />
 	</publications>
 

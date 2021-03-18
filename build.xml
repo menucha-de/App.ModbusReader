@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="havis.custom.harting.modbus.reader" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if">
+<project name="havis.app.modbus.reader" default="publish" xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if">
 
 	<property file="${basedir}/build.properties" />
 
@@ -35,7 +35,7 @@
 	</target>
 
 	<target name="app" depends="jar">
-		<mkdir dir="${build.dir}/deb/opt/havis-apps/conf/havis/custom/harting/modbus/reader" />
+		<mkdir dir="${build.dir}/deb/opt/havis-apps/conf/havis/app/modbus/reader" />
 		<mkdir dir="${build.dir}/deb/opt/havis-apps/bundle" />
 		<symlink link="${build.dir}/deb/opt/havis-apps/bundle/40_havis.util.modbus.jar" resource="/usr/share/java/havis.util.modbus.jar" />
 		<app name="havis.modbus-reader">

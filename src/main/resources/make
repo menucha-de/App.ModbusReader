@@ -4,7 +4,7 @@
 
 APP=$(realpath $0)
 
-NAME=havis.custom.harting.modbus.reader
+NAME=havis.app.modbus.reader
 DEPS="libmodbus5 libjava-modbus"
 INFO=/opt/havis-apps/info
 EXIT=0

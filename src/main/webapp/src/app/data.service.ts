@@ -13,7 +13,7 @@ import { DeviceInfo } from './models/deviceinfo';
 })
 export class DataService {
 
-  private readonly baseUrl = 'rest/custom/harting/modbusreader/';
+  private readonly baseUrl = 'rest/app/modbusreader/';
   constructor(
     private http: HttpClient,
     private broadcaster: BroadcasterService
